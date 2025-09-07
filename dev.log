@@ -7,18 +7,50 @@
   - Local:        http://localhost:3001
 
  ✓ Starting...
- ✓ Ready in 1521ms
+ ✓ Ready in 2.6s
  ○ Compiling / ...
- ✓ Compiled / in 1851ms (516 modules)
- ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
-Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
- ⚠ Unsupported metadata themeColor is configured in metadata export in /. Please move it to viewport export instead.
-Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
- GET / 200 in 2028ms
- ✓ Compiled in 135ms (245 modules)
- ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
-Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
- ⚠ Unsupported metadata themeColor is configured in metadata export in /. Please move it to viewport export instead.
-Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
- GET / 200 in 94ms
-[?25h
+ ✓ Compiled / in 1729ms (514 modules)
+ GET / 200 in 1900ms
+ ✓ Compiled in 149ms (244 modules)
+ GET / 200 in 621ms
+ ✓ Compiled in 1403ms (496 modules)
+ ✓ Compiled in 378ms (496 modules)
+ ✓ Compiled in 318ms (496 modules)
+ ✓ Compiled in 694ms (496 modules)
+ ✓ Compiled in 315ms (496 modules)
+ ✓ Compiled in 217ms (496 modules)
+ ✓ Compiled in 246ms (496 modules)
+ ✓ Compiled in 338ms (496 modules)
+ ✓ Compiled in 216ms (496 modules)
+ ✓ Compiled in 617ms (496 modules)
+ ✓ Compiled in 349ms (496 modules)
+ ✓ Compiled in 266ms (496 modules)
+ ✓ Compiled in 209ms (496 modules)
+ ✓ Compiled in 332ms (496 modules)
+ ✓ Compiled in 199ms (496 modules)
+ ✓ Compiled in 300ms (496 modules)
+ ✓ Compiled in 258ms (496 modules)
+ GET / 200 in 120ms
+ GET / 200 in 346ms
+ GET / 200 in 136ms
+ GET / 200 in 30ms
+ GET / 200 in 1925ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 1148ms (485 modules)
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 1671ms
+ GET / 200 in 154ms
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 47ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 1050ms (284 modules)
+ GET /favicon.ico 200 in 1209ms
+ ✓ Compiled in 973ms (496 modules)
+ ✓ Compiled in 325ms (496 modules)
+ ✓ Compiled in 265ms (496 modules)
+ GET / 200 in 390ms
+ GET / 200 in 25ms
+ GET / 200 in 30ms
+ GET / 200 in 88ms
+ ✓ Compiled /favicon.ico in 427ms (283 modules)
+ GET /favicon.ico 200 in 541ms
+ GET / 200 in 119ms
+ GET /favicon.ico 200 in 94ms
