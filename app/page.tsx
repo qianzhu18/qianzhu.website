@@ -105,64 +105,77 @@ export default function Home() {
     switch (activeSection) {
       case 'home':
         return (
-          <div className="max-w-6xl mx-auto px-8 py-16">
-            <div className="text-center mb-16">
-              <h1 className="text-6xl md:text-8xl font-bold mb-6 chinese-font" style={{ color: 'var(--foreground)' }}>
-                千逐
-              </h1>
-              <p className="text-2xl md:text-3xl mb-4 chinese-font gradient-text">
-                千千君子，温润如玉
-              </p>
-              <p className="text-lg md:text-xl mb-8" style={{ color: 'var(--subtle)' }}>
-                计算机科学 | 系统构建者 | AI与认知探索者
-              </p>
-              
-              <div className="space-y-4 mb-12 max-w-2xl mx-auto">
-                <p className="text-base md:text-lg" style={{ color: 'var(--foreground)' }}>
-                  以第一性原理思考，用奥卡姆剃刀简化，构建反脆弱系统
+          <div className="max-w-7xl mx-auto px-6 py-16">
+            {/* Hero Section */}
+            <div className="hero-section mb-16">
+              <div className="relative z-10">
+                <h1 className="text-6xl md:text-8xl font-bold mb-6 chinese-font text-white">
+                  千逐
+                </h1>
+                <p className="text-2xl md:text-3xl mb-4 chinese-font text-white/90">
+                  千千君子，温润如玉
                 </p>
-                <p className="text-sm md:text-base" style={{ color: 'var(--subtle)' }}>
-                  融合中国古典美学与现代技术，创造优雅的数字体验
+                <p className="text-lg md:text-xl mb-8 text-white/80">
+                  计算机科学 | 系统构建者 | AI与认知探索者
                 </p>
-              </div>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button 
-                  onClick={() => setActiveSection('about')}
-                  className="modern-button modern-button-primary"
-                >
-                  了解更多
-                </button>
-                <button 
-                  onClick={() => {
-                    setActiveSection('cli');
-                    setIsCLIFullscreen(true);
-                  }}
-                  className="modern-button modern-button-secondary"
-                >
-                  体验终端 <kbd className="ml-2 px-2 py-1 rounded text-xs">⌘K</kbd>
-                </button>
+                
+                <div className="space-y-4 mb-12 max-w-3xl mx-auto">
+                  <p className="text-base md:text-lg text-white/90">
+                    以第一性原理思考，用奥卡姆剃刀简化，构建反脆弱系统
+                  </p>
+                  <p className="text-sm md:text-base text-white/70">
+                    融合中国古典美学与现代技术，创造优雅的数字体验
+                  </p>
+                </div>
+                
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <button 
+                    onClick={() => setActiveSection('about')}
+                    className="btn-modern btn-primary"
+                  >
+                    <span>了解更多</span>
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                  </button>
+                  <button 
+                    onClick={() => {
+                      setActiveSection('cli');
+                      setIsCLIFullscreen(true);
+                    }}
+                    className="btn-modern btn-secondary"
+                  >
+                    <span>体验终端</span>
+                    <kbd className="ml-2 px-2 py-1 rounded text-xs bg-white/20">⌘K</kbd>
+                  </button>
+                </div>
               </div>
             </div>
 
             {/* 快速导航卡片 */}
             <div className="grid md:grid-cols-3 gap-8">
               {[
-                { section: 'about', title: '关于我', desc: '了解我的背景和理念' },
-                { section: 'skills', title: '技术能力', desc: '查看我的技术栈' },
-                { section: 'projects', title: '项目经历', desc: '探索我的构建实践' }
+                { section: 'about', title: '关于我', desc: '了解我的背景和理念', icon: '👤' },
+                { section: 'skills', title: '技术能力', desc: '查看我的技术栈', icon: '💻' },
+                { section: 'projects', title: '项目经历', desc: '探索我的构建实践', icon: '🚀' }
               ].map((item) => (
                 <div 
                   key={item.section}
-                  className="modern-card cursor-pointer transform hover:scale-105"
+                  className="modern-card cursor-pointer floating-card"
                   onClick={() => setActiveSection(item.section as 'home' | 'about' | 'skills' | 'projects' | 'contact' | 'cli')}
                 >
-                  <h3 className="text-lg font-semibold mb-2" style={{ color: 'var(--foreground)' }}>
+                  <div className="text-4xl mb-4">{item.icon}</div>
+                  <h3 className="text-xl font-semibold mb-3" style={{ color: 'var(--foreground)' }}>
                     {item.title}
                   </h3>
-                  <p className="text-sm" style={{ color: 'var(--subtle)' }}>
+                  <p className="text-base" style={{ color: 'var(--subtle)' }}>
                     {item.desc}
                   </p>
+                  <div className="mt-4">
+                    <span className="badge-modern badge-secondary">
+                      查看详情
+                    </span>
+                  </div>
                 </div>
               ))}
             </div>
@@ -171,51 +184,57 @@ export default function Home() {
 
       case 'about':
         return (
-          <div className="max-w-4xl mx-auto px-8 py-16">
+          <div className="max-w-6xl mx-auto px-6 py-16">
+            {/* Header */}
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold mb-4 chinese-font" style={{ color: 'var(--foreground)' }}>
-                关于我
-              </h2>
-              <p className="text-xl" style={{ color: 'var(--primary)' }}>
-                第一性原理思考者
-              </p>
+              <div className="hero-section inline-block">
+                <h2 className="text-4xl font-bold mb-4 chinese-font text-white">
+                  关于我
+                </h2>
+                <p className="text-xl text-white/90">
+                  第一性原理思考者
+                </p>
+              </div>
             </div>
             
             <div className="grid md:grid-cols-2 gap-12">
               <div className="space-y-8">
-                <div>
-                  <h3 className="text-xl font-semibold mb-4" style={{ color: 'var(--foreground)' }}>
+                <div className="modern-card">
+                  <h3 className="text-2xl font-semibold mb-6 gradient-text">
                     思维理念
                   </h3>
-                  <div className="space-y-3">
+                  <div className="space-y-4">
                     {[
-                      "第一性原理：追本溯源，从本质出发",
-                      "奥卡姆剃刀：如无必要，勿增实体", 
-                      "反脆弱性：在不确定性中成长",
-                      "长期主义：时间的复利效应"
+                      { title: "第一性原理", desc: "追本溯源，从本质出发", color: "var(--primary)" },
+                      { title: "奥卡姆剃刀", desc: "如无必要，勿增实体", color: "var(--accent)" },
+                      { title: "反脆弱性", desc: "在不确定性中成长", color: "var(--highlight)" },
+                      { title: "长期主义", desc: "时间的复利效应", color: "var(--primary)" }
                     ].map((item, index) => (
-                      <div key={index} className="flex items-start space-x-3">
-                        <span className="mt-1 w-2 h-2 rounded-full" style={{ backgroundColor: 'var(--primary)' }}></span>
-                        <p className="text-sm" style={{ color: 'var(--subtle)' }}>{item}</p>
+                      <div key={index} className="flex items-start space-x-4 p-4 rounded-lg hover:bg-muted transition-colors">
+                        <span className="mt-1 w-3 h-3 rounded-full flex-shrink-0" style={{ backgroundColor: item.color }}></span>
+                        <div>
+                          <p className="font-medium mb-1" style={{ color: 'var(--foreground)' }}>{item.title}</p>
+                          <p className="text-sm" style={{ color: 'var(--subtle)' }}>{item.desc}</p>
+                        </div>
                       </div>
                     ))}
                   </div>
                 </div>
                 
-                <div>
-                  <h3 className="text-xl font-semibold mb-4" style={{ color: 'var(--foreground)' }}>
+                <div className="modern-card">
+                  <h3 className="text-2xl font-semibold mb-6 gradient-text">
                     专业背景
                   </h3>
-                  <div className="space-y-3">
+                  <div className="space-y-4">
                     {[
                       "湖南省大学生创新创业园应用技术部",
                       "湖南AGI & Datawhale校园大使",
                       "跨年级认知社群创始人",
                       "跨校AI生态构建者"
                     ].map((item, index) => (
-                      <div key={index} className="flex items-start space-x-3">
-                        <span className="mt-1 w-2 h-2 rounded-full" style={{ backgroundColor: 'var(--accent)' }}></span>
-                        <p className="text-sm" style={{ color: 'var(--subtle)' }}>{item}</p>
+                      <div key={index} className="flex items-start space-x-4 p-4 rounded-lg hover:bg-muted transition-colors">
+                        <span className="mt-1 w-3 h-3 rounded-full flex-shrink-0" style={{ backgroundColor: 'var(--accent)' }}></span>
+                        <p className="text-base" style={{ color: 'var(--subtle)' }}>{item}</p>
                       </div>
                     ))}
                   </div>
@@ -223,39 +242,48 @@ export default function Home() {
               </div>
               
               <div className="space-y-8">
-                <div>
-                  <h3 className="text-xl font-semibold mb-4" style={{ color: 'var(--foreground)' }}>
+                <div className="modern-card">
+                  <h3 className="text-2xl font-semibold mb-6 gradient-text">
                     核心能力
                   </h3>
-                  <div className="space-y-3">
+                  <div className="space-y-4">
                     {[
-                      "Apple生态系统深度用户",
-                      "Obsidian知识管理哲学",
-                      "社群运营体系构建",
-                      "技术栈整合与优化"
+                      { icon: "🍎", title: "Apple生态系统", desc: "深度用户与开发者" },
+                      { icon: "🧠", title: "Obsidian知识管理", desc: "构建个人知识体系" },
+                      { icon: "👥", title: "社群运营", desc: "构建学习生态系统" },
+                      { icon: "⚡", title: "技术栈整合", desc: "全栈开发与优化" }
                     ].map((item, index) => (
-                      <div key={index} className="flex items-start space-x-3">
-                        <span className="mt-1 w-2 h-2 rounded-full" style={{ backgroundColor: 'var(--highlight)' }}></span>
-                        <p className="text-sm" style={{ color: 'var(--subtle)' }}>{item}</p>
+                      <div key={index} className="flex items-start space-x-4 p-4 rounded-lg hover:bg-muted transition-colors">
+                        <div className="text-2xl">{item.icon}</div>
+                        <div>
+                          <p className="font-medium mb-1" style={{ color: 'var(--foreground)' }}>{item.title}</p>
+                          <p className="text-sm" style={{ color: 'var(--subtle)' }}>{item.desc}</p>
+                        </div>
                       </div>
                     ))}
                   </div>
                 </div>
                 
-                <div>
-                  <h3 className="text-xl font-semibold mb-4" style={{ color: 'var(--foreground)' }}>
+                <div className="modern-card">
+                  <h3 className="text-2xl font-semibold mb-6 gradient-text">
                     探索方向
                   </h3>
-                  <div className="space-y-3">
+                  <div className="space-y-4">
                     {[
-                      "AI与认知科学交叉研究",
-                      "复杂系统的涌现现象",
-                      "知识管理系统设计",
-                      "生产力工具开发"
+                      { title: "AI与认知科学", desc: "交叉研究与应用", tag: "AI" },
+                      { title: "复杂系统", desc: "涌现现象研究", tag: "系统" },
+                      { title: "知识管理", desc: "系统设计与优化", tag: "PKM" },
+                      { title: "生产力工具", desc: "开发与实践", tag: "工具" }
                     ].map((item, index) => (
-                      <div key={index} className="flex items-start space-x-3">
-                        <span className="mt-1 w-2 h-2 rounded-full" style={{ backgroundColor: 'var(--primary)' }}></span>
-                        <p className="text-sm" style={{ color: 'var(--subtle)' }}>{item}</p>
+                      <div key={index} className="flex items-start space-x-4 p-4 rounded-lg hover:bg-muted transition-colors">
+                        <span className="mt-1 w-3 h-3 rounded-full flex-shrink-0" style={{ backgroundColor: 'var(--primary)' }}></span>
+                        <div className="flex-1">
+                          <div className="flex items-center justify-between mb-1">
+                            <p className="font-medium" style={{ color: 'var(--foreground)' }}>{item.title}</p>
+                            <span className="badge-modern badge-secondary text-xs">{item.tag}</span>
+                          </div>
+                          <p className="text-sm" style={{ color: 'var(--subtle)' }}>{item.desc}</p>
+                        </div>
                       </div>
                     ))}
                   </div>
@@ -629,10 +657,10 @@ export default function Home() {
           <div className="max-w-4xl mx-auto px-6 text-center">
             <div className="mb-4">
               <p className="chinese-font text-lg mb-1" style={{ color: 'var(--foreground)' }}>
-                &ldquo;君子藏器于身，待时而动&rdquo;
+                &ldquo;保持简约，追求本质&rdquo;
               </p>
               <p className="text-sm" style={{ color: 'var(--subtle)' }}>
-                — 《周易》
+                — 现代设计理念
               </p>
             </div>
             
