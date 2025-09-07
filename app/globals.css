@@ -7,10 +7,12 @@
   /* 玉石色调 - 浅色主题 */
   --background: #f5f5f1;      /* 纸白色 */
   --foreground: #3a4f4b;      /* 墨绿色 */
-  --accent: #4a7c59;         /* 青玉蓝 */
+  --primary: #4a7c59;        /* 青玉蓝 */
+  --accent: #6fa877;         /* 浅青玉蓝 */
   --highlight: #c0504d;       /* 印章红 */
   --subtle: #8b9b96;         /* 浅墨绿 */
   --border: #d4ddd8;         /* 边框色 */
+  --muted: #edf2ef;          /* 浅背景色 */
   
   /* 终端背景色 */
   --terminal-bg: rgba(58, 79, 75, 0.05);
@@ -26,10 +28,12 @@
 [data-theme="dark"] {
   --background: #1a1f1e;
   --foreground: #e8f0ee;
-  --accent: #6fa877;
+  --primary: #6fa877;
+  --accent: #8fc696;
   --highlight: #e87471;
   --subtle: #a8b8b3;
   --border: #3a4f4b;
+  --muted: #2a3432;
   
   --terminal-bg: rgba(232, 240, 238, 0.05);
   --terminal-border: rgba(232, 240, 238, 0.1);
@@ -117,7 +121,7 @@ body {
 
 /* 命令提示符 */
 .prompt {
-  color: var(--accent);
+  color: var(--primary);
   margin-right: 0.5rem;
 }
 
@@ -130,7 +134,7 @@ body {
 
 /* 链接样式 */
 .cli-link {
-  color: var(--accent);
+  color: var(--primary);
   text-decoration: underline;
   cursor: pointer;
   transition: color 0.2s ease;
@@ -142,7 +146,7 @@ body {
 
 /* 标题样式 */
 .cli-title {
-  color: var(--accent);
+  color: var(--primary);
   font-weight: 600;
   margin: 1rem 0 0.5rem 0;
 }
@@ -161,7 +165,7 @@ body {
 
 /* 成功信息样式 */
 .success {
-  color: var(--accent);
+  color: var(--primary);
   font-weight: 500;
 }
 
@@ -175,7 +179,7 @@ body {
   display: inline-block;
   width: 8px;
   height: 1.2em;
-  background: var(--accent);
+  background: var(--primary);
   animation: blink 1s infinite;
   vertical-align: text-bottom;
   margin-left: 2px;
@@ -196,7 +200,7 @@ body {
 }
 
 .terminal::-webkit-scrollbar-thumb:hover {
-  background: var(--accent);
+  background: var(--primary);
 }
 
 /* 工具类 */
@@ -246,6 +250,69 @@ body {
   animation: animateIn 0.3s ease-out forwards;
 }
 
+/* 现代化样式 */
+.modern-card {
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+}
+
+.modern-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass-effect {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* 按钮样式 */
+.modern-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.modern-button-primary {
+  background: var(--primary);
+  color: var(--background);
+}
+
+.modern-button-primary:hover {
+  background: var(--accent);
+  transform: translateY(-1px);
+}
+
+.modern-button-secondary {
+  background: transparent;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.modern-button-secondary:hover {
+  background: var(--primary);
+  color: var(--background);
+}
+
 /* 响应式设计 */
 @media (max-width: 768px) {
   .terminal {
@@ -253,6 +320,10 @@ body {
     padding: 1rem;
     min-height: 450px;
     max-height: 600px;
+  }
+  
+  .modern-card {
+    padding: 1rem;
   }
 }
 
