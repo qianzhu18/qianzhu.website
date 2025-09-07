@@ -119,12 +119,9 @@ export default function Home() {
                   计算机科学 | 系统构建者 | AI与认知探索者
                 </p>
                 
-                <div className="space-y-4 mb-12 max-w-3xl mx-auto">
+                <div className="mb-12 max-w-3xl mx-auto">
                   <p className="text-base md:text-lg" style={{ color: 'var(--foreground)' }}>
                     以第一性原理思考，用奥卡姆剃刀简化，构建反脆弱系统
-                  </p>
-                  <p className="text-sm md:text-base" style={{ color: 'var(--subtle)' }}>
-                    融合中国古典美学与现代技术，创造优雅的数字体验
                   </p>
                 </div>
                 
@@ -248,7 +245,7 @@ export default function Home() {
                   </h3>
                   <div className="space-y-4">
                     {[
-                      { icon: "🍎", title: "Apple生态系统", desc: "深度用户与开发者" },
+                      { icon: "🍎", title: "Apple生态系统", desc: "深度用户以及工作流设计者" },
                       { icon: "🧠", title: "Obsidian知识管理", desc: "构建个人知识体系" },
                       { icon: "👥", title: "社群运营", desc: "构建学习生态系统" },
                       { icon: "⚡", title: "技术栈整合", desc: "全栈开发与优化" }
@@ -651,25 +648,10 @@ export default function Home() {
         </div>
       )}
 
-      {/* 页脚 */}
+      {/* 页脚 - 留白处理 */}
       {!isCLIFullscreen && (
-        <footer className="border-t py-8" style={{ borderColor: 'var(--border)' }}>
-          <div className="max-w-4xl mx-auto px-6 text-center">
-            <div className="mb-4">
-              <p className="chinese-font text-lg mb-1" style={{ color: 'var(--foreground)' }}>
-                &ldquo;保持简约，追求本质&rdquo;
-              </p>
-              <p className="text-sm" style={{ color: 'var(--subtle)' }}>
-                — 现代设计理念
-              </p>
-            </div>
-            
-            <div className="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-8 text-sm" style={{ color: 'var(--subtle)' }}>
-              <span>© 2024 千逐</span>
-              <span>Powered by Next.js</span>
-              <span>Deployed on Vercel</span>
-            </div>
-          </div>
+        <footer className="py-8">
+          {/* 留白处理 */}
         </footer>
       )}
     </div>
