@@ -106,24 +106,24 @@ export default function Home() {
       case 'home':
         return (
           <div className="max-w-7xl mx-auto px-6 py-16">
-            {/* Hero Section */}
+            {/* Hero Section - 玉石主题 */}
             <div className="hero-section mb-16">
               <div className="relative z-10">
-                <h1 className="text-6xl md:text-8xl font-bold mb-6 chinese-font text-white">
+                <h1 className="text-6xl md:text-8xl font-bold mb-6 chinese-font" style={{ color: 'var(--foreground)' }}>
                   千逐
                 </h1>
-                <p className="text-2xl md:text-3xl mb-4 chinese-font text-white/90">
+                <p className="text-2xl md:text-3xl mb-4 chinese-font" style={{ color: 'var(--primary)' }}>
                   千千君子，温润如玉
                 </p>
-                <p className="text-lg md:text-xl mb-8 text-white/80">
+                <p className="text-lg md:text-xl mb-8" style={{ color: 'var(--subtle)' }}>
                   计算机科学 | 系统构建者 | AI与认知探索者
                 </p>
                 
                 <div className="space-y-4 mb-12 max-w-3xl mx-auto">
-                  <p className="text-base md:text-lg text-white/90">
+                  <p className="text-base md:text-lg" style={{ color: 'var(--foreground)' }}>
                     以第一性原理思考，用奥卡姆剃刀简化，构建反脆弱系统
                   </p>
-                  <p className="text-sm md:text-base text-white/70">
+                  <p className="text-sm md:text-base" style={{ color: 'var(--subtle)' }}>
                     融合中国古典美学与现代技术，创造优雅的数字体验
                   </p>
                 </div>
@@ -146,7 +146,7 @@ export default function Home() {
                     className="btn-modern btn-secondary"
                   >
                     <span>体验终端</span>
-                    <kbd className="ml-2 px-2 py-1 rounded text-xs bg-white/20">⌘K</kbd>
+                    <kbd className="ml-2 px-2 py-1 rounded text-xs" style={{ backgroundColor: 'var(--jade-light)', color: 'var(--foreground)' }}>⌘K</kbd>
                   </button>
                 </div>
               </div>
@@ -188,10 +188,10 @@ export default function Home() {
             {/* Header */}
             <div className="text-center mb-16">
               <div className="hero-section inline-block">
-                <h2 className="text-4xl font-bold mb-4 chinese-font text-white">
+                <h2 className="text-4xl font-bold mb-4 chinese-font" style={{ color: 'var(--foreground)' }}>
                   关于我
                 </h2>
-                <p className="text-xl text-white/90">
+                <p className="text-xl" style={{ color: 'var(--primary)' }}>
                   第一性原理思考者
                 </p>
               </div>
@@ -200,17 +200,17 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-12">
               <div className="space-y-8">
                 <div className="modern-card">
-                  <h3 className="text-2xl font-semibold mb-6 gradient-text">
+                  <h3 className="text-2xl font-semibold mb-6" style={{ color: 'var(--primary)' }}>
                     思维理念
                   </h3>
                   <div className="space-y-4">
                     {[
                       { title: "第一性原理", desc: "追本溯源，从本质出发", color: "var(--primary)" },
                       { title: "奥卡姆剃刀", desc: "如无必要，勿增实体", color: "var(--accent)" },
-                      { title: "反脆弱性", desc: "在不确定性中成长", color: "var(--highlight)" },
+                      { title: "反脆弱性", desc: "在不确定性中成长", color: "var(--accent)" },
                       { title: "长期主义", desc: "时间的复利效应", color: "var(--primary)" }
                     ].map((item, index) => (
-                      <div key={index} className="flex items-start space-x-4 p-4 rounded-lg hover:bg-muted transition-colors">
+                      <div key={index} className="flex items-start space-x-4 p-4 rounded-lg hover:bg-[var(--muted)] transition-colors">
                         <span className="mt-1 w-3 h-3 rounded-full flex-shrink-0" style={{ backgroundColor: item.color }}></span>
                         <div>
                           <p className="font-medium mb-1" style={{ color: 'var(--foreground)' }}>{item.title}</p>
@@ -222,7 +222,7 @@ export default function Home() {
                 </div>
                 
                 <div className="modern-card">
-                  <h3 className="text-2xl font-semibold mb-6 gradient-text">
+                  <h3 className="text-2xl font-semibold mb-6 style={{ color: 'var(--primary)' }}">
                     专业背景
                   </h3>
                   <div className="space-y-4">
@@ -232,7 +232,7 @@ export default function Home() {
                       "跨年级认知社群创始人",
                       "跨校AI生态构建者"
                     ].map((item, index) => (
-                      <div key={index} className="flex items-start space-x-4 p-4 rounded-lg hover:bg-muted transition-colors">
+                      <div key={index} className="flex items-start space-x-4 p-4 rounded-lg hover:bg-[var(--muted)] transition-colors">
                         <span className="mt-1 w-3 h-3 rounded-full flex-shrink-0" style={{ backgroundColor: 'var(--accent)' }}></span>
                         <p className="text-base" style={{ color: 'var(--subtle)' }}>{item}</p>
                       </div>
@@ -243,7 +243,7 @@ export default function Home() {
               
               <div className="space-y-8">
                 <div className="modern-card">
-                  <h3 className="text-2xl font-semibold mb-6 gradient-text">
+                  <h3 className="text-2xl font-semibold mb-6 style={{ color: 'var(--primary)' }}">
                     核心能力
                   </h3>
                   <div className="space-y-4">
@@ -253,7 +253,7 @@ export default function Home() {
                       { icon: "👥", title: "社群运营", desc: "构建学习生态系统" },
                       { icon: "⚡", title: "技术栈整合", desc: "全栈开发与优化" }
                     ].map((item, index) => (
-                      <div key={index} className="flex items-start space-x-4 p-4 rounded-lg hover:bg-muted transition-colors">
+                      <div key={index} className="flex items-start space-x-4 p-4 rounded-lg hover:bg-[var(--muted)] transition-colors">
                         <div className="text-2xl">{item.icon}</div>
                         <div>
                           <p className="font-medium mb-1" style={{ color: 'var(--foreground)' }}>{item.title}</p>
@@ -265,7 +265,7 @@ export default function Home() {
                 </div>
                 
                 <div className="modern-card">
-                  <h3 className="text-2xl font-semibold mb-6 gradient-text">
+                  <h3 className="text-2xl font-semibold mb-6 style={{ color: 'var(--primary)' }}">
                     探索方向
                   </h3>
                   <div className="space-y-4">
@@ -275,7 +275,7 @@ export default function Home() {
                       { title: "知识管理", desc: "系统设计与优化", tag: "PKM" },
                       { title: "生产力工具", desc: "开发与实践", tag: "工具" }
                     ].map((item, index) => (
-                      <div key={index} className="flex items-start space-x-4 p-4 rounded-lg hover:bg-muted transition-colors">
+                      <div key={index} className="flex items-start space-x-4 p-4 rounded-lg hover:bg-[var(--muted)] transition-colors">
                         <span className="mt-1 w-3 h-3 rounded-full flex-shrink-0" style={{ backgroundColor: 'var(--primary)' }}></span>
                         <div className="flex-1">
                           <div className="flex items-center justify-between mb-1">
@@ -383,7 +383,7 @@ export default function Home() {
                       {project.title}
                     </h3>
                     <span className="px-2 py-1 rounded text-xs" style={{ 
-                      backgroundColor: project.status === "已完成" ? 'var(--primary)' : 'var(--muted)',
+                      backgroundColor: project.status === "已完成" ? 'var(--accent)' : 'var(--muted)',
                       color: project.status === "已完成" ? 'var(--background)' : 'var(--foreground)'
                     }}>
                       {project.status}
@@ -564,7 +564,7 @@ export default function Home() {
                     className={`w-full text-left px-4 py-3 rounded-lg transition-all duration-200 ${
                       activeSection === key 
                         ? 'bg-primary text-white'
-                        : 'hover:bg-muted'
+                        : 'hover:bg-[var(--muted)]'
                     }`}
                     style={{ 
                       backgroundColor: activeSection === key ? 'var(--primary)' : 'transparent',
@@ -636,7 +636,7 @@ export default function Home() {
                   onClick={() => setLayoutConfig(prev => ({ ...prev, showCLI: false }))}
                   className="px-3 py-1 rounded text-sm"
                   style={{ 
-                    backgroundColor: 'var(--highlight)',
+                    backgroundColor: 'var(--accent)',
                     color: 'var(--background)'
                   }}
                 >
