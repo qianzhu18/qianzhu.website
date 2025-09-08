@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import CLI from '@/components/CLI';
 import ThemeToggle from '@/components/ThemeToggle';
 
@@ -105,17 +106,17 @@ export default function Home() {
     switch (activeSection) {
       case 'home':
         return (
-          <div className="max-w-7xl mx-auto px-6 py-16">
+          <div className="max-w-7xl mx-auto px-4 md:px-6 py-12 md:py-16">
             {/* Hero Section - 玉石主题 */}
             <div className="hero-section mb-16">
               <div className="relative z-10">
-                <h1 className="text-6xl md:text-8xl font-bold mb-6 chinese-font" style={{ color: 'var(--foreground)' }}>
+                <h1 className="text-5xl md:text-6xl lg:text-8xl font-bold mb-4 md:mb-6 chinese-font" style={{ color: 'var(--foreground)' }}>
                   千逐
                 </h1>
-                <p className="text-2xl md:text-3xl mb-4 chinese-font" style={{ color: 'var(--primary)' }}>
+                <p className="text-xl md:text-2xl lg:text-3xl mb-3 md:mb-4 chinese-font" style={{ color: 'var(--primary)' }}>
                   千千君子，温润如玉
                 </p>
-                <p className="text-lg md:text-xl mb-8" style={{ color: 'var(--subtle)' }}>
+                <p className="text-base md:text-lg lg:text-xl mb-6 md:mb-8" style={{ color: 'var(--subtle)' }}>
                   计算机科学 | 系统构建者 | AI与认知探索者
                 </p>
                 
@@ -150,7 +151,7 @@ export default function Home() {
             </div>
 
             {/* 快速导航卡片 */}
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {[
                 { section: 'about', title: '关于我', desc: '了解我的背景和理念', icon: '👤' },
                 { section: 'skills', title: '技术能力', desc: '查看我的技术栈', icon: '💻' },
@@ -161,11 +162,11 @@ export default function Home() {
                   className="modern-card cursor-pointer floating-card"
                   onClick={() => setActiveSection(item.section as 'home' | 'about' | 'skills' | 'projects' | 'contact' | 'cli')}
                 >
-                  <div className="text-4xl mb-4">{item.icon}</div>
-                  <h3 className="text-xl font-semibold mb-3" style={{ color: 'var(--foreground)' }}>
+                  <div className="text-3xl md:text-4xl mb-3 md:mb-4">{item.icon}</div>
+                  <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-3" style={{ color: 'var(--foreground)' }}>
                     {item.title}
                   </h3>
-                  <p className="text-base" style={{ color: 'var(--subtle)' }}>
+                  <p className="text-sm md:text-base" style={{ color: 'var(--subtle)' }}>
                     {item.desc}
                   </p>
                   <div className="mt-4">
@@ -181,7 +182,7 @@ export default function Home() {
 
       case 'about':
         return (
-          <div className="max-w-6xl mx-auto px-6 py-16">
+          <div className="max-w-6xl mx-auto px-4 md:px-6 py-12 md:py-16">
             {/* Header */}
             <div className="text-center mb-16">
               <div className="hero-section inline-block">
@@ -292,7 +293,7 @@ export default function Home() {
 
       case 'skills':
         return (
-          <div className="max-w-6xl mx-auto px-8 py-16">
+          <div className="max-w-6xl mx-auto px-4 md:px-8 py-12 md:py-16">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-4 chinese-font" style={{ color: 'var(--foreground)' }}>
                 技术能力
@@ -343,7 +344,7 @@ export default function Home() {
 
       case 'projects':
         return (
-          <div className="max-w-4xl mx-auto px-8 py-16">
+          <div className="max-w-4xl mx-auto px-4 md:px-8 py-12 md:py-16">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-4 chinese-font" style={{ color: 'var(--foreground)' }}>
                 系统构建
@@ -407,7 +408,7 @@ export default function Home() {
 
       case 'contact':
         return (
-          <div className="max-w-2xl mx-auto px-8 py-16">
+          <div className="max-w-2xl mx-auto px-4 md:px-8 py-12 md:py-16">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-4 chinese-font" style={{ color: 'var(--foreground)' }}>
                 联系我
@@ -436,6 +437,27 @@ export default function Home() {
                 </div>
               ))}
               
+              {/* 二维码联系方式 */}
+              <div className="modern-card">
+                <h3 className="text-lg font-semibold mb-4" style={{ color: 'var(--foreground)' }}>
+                  微信二维码
+                </h3>
+                <div className="flex flex-col items-center space-y-4">
+                  <div className="w-48 h-48 bg-white rounded-lg p-2 border-2" style={{ borderColor: 'var(--border)' }}>
+                    <Image 
+                      src="https://youke1.picui.cn/s1/2025/09/08/68bea85ed0b44.jpg" 
+                      alt="微信二维码" 
+                      width={192}
+                      height={192}
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <p className="text-sm text-center" style={{ color: 'var(--subtle)' }}>
+                    扫码添加微信好友
+                  </p>
+                </div>
+              </div>
+              
               <div className="modern-card">
                 <h3 className="text-lg font-semibold mb-3" style={{ color: 'var(--foreground)' }}>
                   合作意向
@@ -452,7 +474,7 @@ export default function Home() {
 
       case 'cli':
         return (
-          <div className="max-w-4xl mx-auto px-8 py-16">
+          <div className="max-w-4xl mx-auto px-4 md:px-8 py-12 md:py-16">
             <div className="text-center mb-8">
               <h2 className="text-3xl font-bold mb-4 chinese-font" style={{ color: 'var(--foreground)' }}>
                 命令行终端
@@ -482,16 +504,19 @@ export default function Home() {
               }}>
         <div className="flex items-center justify-between px-6 h-16">
           <div className="flex items-center space-x-8">
-            <div>
+            <button 
+              onClick={() => setActiveSection('home')}
+              className="hover:opacity-80 transition-opacity"
+            >
               <h1 className="text-xl font-bold chinese-font" style={{ color: 'var(--foreground)' }}>
                 千逐
               </h1>
               <p className="text-xs" style={{ color: 'var(--subtle)' }}>
                 Qianzhu
               </p>
-            </div>
+            </button>
             
-            {/* 主导航 */}
+            {/* 主导航 - 桌面端 */}
             <nav className="hidden lg:flex space-x-6">
               {Object.entries(sections).map(([key, section]) => (
                 <button
@@ -517,9 +542,50 @@ export default function Home() {
                 </button>
               ))}
             </nav>
+            
+            {/* 移动端导航菜单 */}
+            <div className="lg:hidden">
+              <select 
+                value={activeSection}
+                onChange={(e) => {
+                  const newSection = e.target.value as 'home' | 'about' | 'skills' | 'projects' | 'contact' | 'cli';
+                  setActiveSection(newSection);
+                  if (newSection === 'cli') setIsCLIFullscreen(true);
+                }}
+                className="px-3 py-2 rounded-lg text-sm"
+                style={{ 
+                  backgroundColor: 'var(--muted)',
+                  color: 'var(--foreground)',
+                  border: '1px solid var(--border)'
+                }}
+              >
+                {Object.entries(sections).map(([key, section]) => (
+                  <option key={key} value={key}>
+                    {section.title}
+                  </option>
+                ))}
+              </select>
+            </div>
           </div>
           
           <div className="flex items-center space-x-4">
+            {/* 移动端返回按钮 */}
+            {activeSection !== 'home' && (
+              <button 
+                onClick={() => setActiveSection('home')}
+                className="lg:hidden flex items-center space-x-1 px-3 py-2 rounded-lg text-sm"
+                style={{ 
+                  backgroundColor: 'var(--muted)',
+                  color: 'var(--foreground)'
+                }}
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
+                </svg>
+                <span>返回</span>
+              </button>
+            )}
+            
             <ThemeToggle />
             
             {/* CLI快捷按钮 */}
@@ -641,7 +707,7 @@ export default function Home() {
                 </button>
               </div>
             </div>
-            <div className="h-64 overflow-hidden">
+            <div className="h-48 md:h-64 lg:h-96 overflow-y-auto overflow-x-hidden">
               <CLI />
             </div>
           </div>
