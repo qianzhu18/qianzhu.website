@@ -714,10 +714,34 @@ export default function Home() {
         </div>
       )}
 
-      {/* 页脚 - 留白处理 */}
+      {/* 页脚 */}
       {!isCLIFullscreen && (
-        <footer className="py-8">
-          {/* 留白处理 */}
+        <footer className="border-t py-8" style={{ borderColor: 'var(--border)' }}>
+          <div className="max-w-4xl mx-auto px-6 text-center">
+            <div className="mb-4">
+              <p className="chinese-font text-lg mb-1" style={{ color: 'var(--foreground)' }}>
+                &ldquo;保持简约，追求本质&rdquo;
+              </p>
+              <p className="text-sm" style={{ color: 'var(--subtle)' }}>
+                — 现代设计理念
+              </p>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-8 text-sm" style={{ color: 'var(--subtle)' }}>
+              <span>© 2024 千逐</span>
+              <span>Powered by Next.js</span>
+              <div className="flex items-center space-x-2">
+                <span>Deployed on</span>
+                <Image 
+                  src="https://youke1.picui.cn/s1/2025/09/08/68beedd78ab1c.jpg" 
+                  alt="Vercel" 
+                  width={16}
+                  height={16}
+                  className="w-4 h-4"
+                />
+              </div>
+            </div>
+          </div>
         </footer>
       )}
     </div>
