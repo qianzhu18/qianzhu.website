@@ -22,6 +22,13 @@ export const metadata: Metadata = {
   creator: "千逐",
   publisher: "千逐",
   robots: "index, follow",
+  icons: {
+    icon: [
+      { url: 'https://youke1.picui.cn/s1/2025/09/08/68beedd78ab1c.jpg', sizes: 'any' },
+    ],
+    shortcut: 'https://youke1.picui.cn/s1/2025/09/08/68beedd78ab1c.jpg',
+    apple: 'https://youke1.picui.cn/s1/2025/09/08/68beedd78ab1c.jpg',
+  },
   openGraph: {
     title: "千逐的个人空间",
     description: "千千君子，温润如玉 - 融合中国古典美学与现代技术的交互式个人网站",
