@@ -34,8 +34,8 @@ export default function CLI({ className = '' }: CLIProps) {
   about       - 个人简介
   contact     - 联系方式
   theme       - 切换主题 (light/dark)
-  skills      - 技术能力
-  projects    - 项目展示
+  skills      - 能力基石
+  projects    - 生态构建
   
 使用 'help <命令名>' 查看具体命令的帮助信息。`;
       }
@@ -48,8 +48,8 @@ export default function CLI({ className = '' }: CLIProps) {
         about: 'about - 个人简介\n用法: about',
         contact: 'contact - 联系方式\n用法: contact',
         theme: 'theme - 切换主题\n用法: theme [light|dark]',
-        skills: 'skills - 技术能力\n用法: skills',
-        projects: 'projects - 项目展示\n用法: projects',
+        skills: 'skills - 能力基石\n用法: skills',
+        projects: 'projects - 生态构建\n用法: projects',
         poem: 'poem - 诗词展示\n用法: poem',
       };
       return helpText[command] || `未知命令: ${command}`;
@@ -62,14 +62,13 @@ export default function CLI({ className = '' }: CLIProps) {
 
     welcome: () => {
       const messages = [
-        '千千君子，温润如玉',
+        '千逐 (Qian Zhu)',
+        '计算机科学 | 生态构建者 | Vibe Coding 实践者',
         '',
-        '欢迎来到千逐的个人网站！',
+        '欢迎来到千逐的命令行空间。',
+        '从第一性原理到行动涌现，寻找“拱火”与真实连接。',
         '',
-        '这是一个融合现代技术与人文思考的命令行界面。',
-        '输入 help 查看所有可用命令，开始探索我的世界。',
-        '',
-        '保持简约，追求本质'
+        '输入 help 查看可用命令。'
       ];
       return messages.join('\n');
     },
@@ -78,16 +77,15 @@ export default function CLI({ className = '' }: CLIProps) {
       const messages = [
         '千逐 (Qianzhu)',
         '',
-        '身份：计算机科学 | 系统构建者 | AI与认知探索者',
+        '身份：计算机科学 | 生态构建者 | Vibe Coding 实践者',
         '',
         '核心理念：',
-        '• 第一性原理思考者',
-        '• 奥卡姆剃刀实践者',
-        '• 反脆弱性系统构建者',
-        '• 长期主义价值创造者',
+        '• 第一性原理 + 奥卡姆剃刀：用本质简化系统',
+        '• 反脆弱：在不确定性中成长',
+        '• 涌现智慧：在行动现场寻找答案',
+        '• 真实链接：让认知盈余变为高信噪比输出',
         '',
-        '特色标签：',
-        '#Apple生态系统 #Obsidian知识管理 #AI探索 #社群构建 #生产力系统'
+        '标签：#VibeCoding #全栈实践 #认知生态 #拱火'
       ];
       return messages.join('\n');
     },
@@ -96,22 +94,16 @@ export default function CLI({ className = '' }: CLIProps) {
       const messages = [
         '关于千逐',
         '',
-        '我是一名系统构建者，专注于通过技术创造优雅的解决方案。',
+        '过去，我热衷于用“第一性原理”构建静态的认知大厦；',
+        '现在，更专注在具体行动中寻找“涌现”的智慧。',
         '',
-        '专业背景：',
-        '• 计算机科学基础理论与实践',
-        '• Apple生态系统深度用户',
-        '• 知识管理与第二大脑构建',
-        '• AI技术与认知科学探索',
-        '• 社群运营与生态建设',
+        '我信奉奥卡姆剃刀与反脆弱，但不再停留在认知闭环。',
+        '从“长理分浪”的认知基石，到“洋来社”的行动实验，',
+        '正在探索如何打破“输入肥胖症”，把认知盈余转化为真实连接与输出。',
         '',
-        '思维工具：',
-        '• 第一性原理 - 追求本质，化繁为简',
-        '• 奥卡姆剃刀 - 如无必要，勿增实体',
-        '• 反脆弱性 - 在不确定性中成长',
-        '• 长期主义 - 持复利效应创造价值',
+        '目标：构建反内耗、高行动力、具情感纽带的成长正反馈生态。',
         '',
-        '联系方式：输入 contact 查看详细信息'
+        '联系方式：输入 contact 查看详细信息。'
       ];
       return messages.join('\n');
     },
@@ -121,17 +113,15 @@ export default function CLI({ className = '' }: CLIProps) {
         '联系方式',
         '',
         '📧 Email: qianzhuxue@gmail.com',
-        '💬 WeChat: ZJH2729478858',
-        '🐦 Twitter: @Qianzhujh',
+        '💬 Wechat: AIGCqianzhu（请备注来意）',
+        '🐦 Twitter: https://x.com/Qianzhujh',
         '',
-        '合作意向：',
-        '• 技术项目合作',
-        '• AI应用开发',
-        '• 知识管理系统构建',
-        '• 社群运营咨询',
-        '• 开源项目贡献',
+        '寻找“点火者”与“同行人”：',
+        '• Vibe Coding / 全栈实践合作',
+        '• AI 应用与认知生态探索',
+        '• 真实链接与显性输出共创',
         '',
-        '欢迎同路人联系，一起创造价值！'
+        '不做冷漠的数据包，去成为点火的人。'
       ];
       return messages.join('\n');
     },
@@ -153,62 +143,38 @@ export default function CLI({ className = '' }: CLIProps) {
 
     skills: () => {
       const messages = [
-        '技术能力',
+        '能力基石',
         '',
-        '前端开发：',
-        '• React / Next.js / TypeScript',
-        '• Tailwind CSS / 现代CSS',
-        '• 响应式设计与用户体验',
+        '技术哲学：Vibe Coding',
+        '• 自然语言即代码，与 AI 共舞的心流体验',
+        '• 借助 AI 杠杆打破前后端边界的全栈实践',
         '',
-        '后端技术：',
-        '• Node.js / Express',
-        '• 数据库设计与优化',
-        '• API设计与集成',
+        '从“好玩”到“有用”',
+        '• 趣味实验：一批基于 AI 的 Vibe Cases',
+        '• 价值交付：迭代为能解决真实问题的服务',
         '',
-        '开发工具：',
-        '• Git / GitHub 工作流',
-        '• Docker 容器化',
-        '• 自动化部署',
-        '• 性能优化',
-        '',
-        '专业领域：',
-        '• Apple生态系统 (macOS / iOS)',
-        '• Obsidian知识管理',
-        '• AI编程与应用',
-        '• 生产力系统设计',
-        '',
-        '软技能：',
-        '• 系统思维',
-        '• 项目管理',
-        '• 团队协作',
-        '• 知识分享'
+        '思维与生产力',
+        '• 正反馈飞轮：外部拱火 + 显性输出',
+        '• 知识内化：Apple 生态 + Obsidian 第二大脑'
       ];
       return messages.join('\n');
     },
 
     projects: () => {
       const messages = [
-        '项目展示',
+        '生态构建',
         '',
-        '跨年级认知社群 (Cognitive Growth Guild)',
-        '• 构建跨年级学习交流平台',
-        '• 促进认知能力共同提升',
-        '• 建立长期学习社群',
+        '长理分浪 (基石)',
+        '• 定位：让“后浪”在成浪前就令人艳羡的认知成长社群',
+        '• 逻辑：成浪前蓄力，跨越物理隔阂，先建认知高地',
         '',
-        '跨校AI生态建设',
-        '• 200+成员AI社群构建',
-        '• 校园AI技术推广',
-        '• 人才培养生态',
+        '洋来社 (行动实验)',
+        '• 定位：基于“拱火”哲学的反内耗成长生态',
+        '• 逻辑：低摩擦启动 - 外部拱火 - 显性输出',
         '',
-        '个人知识管理系统',
-        '• 基于Obsidian的第二大脑',
-        '• 结构化知识链接',
-        '• 思想孵化与输出',
-        '',
-        '技术博客与分享',
-        '• 技术文章撰写',
-        '• 开源项目贡献',
-        '• 知识经验分享'
+        '跨校认知网络',
+        '• 定位：连接本校与外部高维认知资源的枢纽',
+        '• 逻辑：打破信息壁垒，引入外部活水'
       ];
       return messages.join('\n');
     },
