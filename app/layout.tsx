@@ -24,10 +24,10 @@ export const metadata: Metadata = {
   robots: "index, follow",
   icons: {
     icon: [
-      { url: 'https://youke1.picui.cn/s1/2025/09/08/68beedd78ab1c.jpg', sizes: 'any' },
+      { url: '/icons/favicon-68d25e7168b4f.jpg', sizes: 'any' },
     ],
-    shortcut: 'https://youke1.picui.cn/s1/2025/09/08/68beedd78ab1c.jpg',
-    apple: 'https://youke1.picui.cn/s1/2025/09/08/68beedd78ab1c.jpg',
+    shortcut: '/icons/favicon-68d25e7168b4f.jpg',
+    apple: '/icons/favicon-68d25e7168b4f.jpg',
   },
   openGraph: {
     title: "千逐的个人空间",
