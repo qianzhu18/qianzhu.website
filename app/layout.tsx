@@ -24,10 +24,10 @@ export const metadata: Metadata = {
   robots: "index, follow",
   icons: {
     icon: [
-      { url: '/icons/favicon-68d25e7168b4f.jpg', sizes: 'any' },
+      { url: '/icons/favicon-qianzhu-new.jpg', sizes: 'any' },
     ],
-    shortcut: '/icons/favicon-68d25e7168b4f.jpg',
-    apple: '/icons/favicon-68d25e7168b4f.jpg',
+    shortcut: '/icons/favicon-qianzhu-new.jpg',
+    apple: '/icons/favicon-qianzhu-new.jpg',
   },
   openGraph: {
     title: "千逐的个人空间",
